@@ -1,0 +1,12 @@
+fd8d2fc701677339b9820f33fca4c8b3 *ChangeLog
+fb2acdccfaea8a54bda3af0c6447499a *DESCRIPTION
+defdf994819b1d41ddae03fae9ba0bca *NAMESPACE
+c30c7ab8994a98ebd8c010c451032944 *R/anw.R
+2ed7c3958198aee1b164b39608f56cf3 *R/anw_infsup.R
+8bff1504d112051948e7eb05c18a795a *R/chem_const.R
+bbc8899b9c7f4609470881120bec44ff *R/equation_at.R
+575ff00031c1ef8e70fb260d889e17b0 *R/hinfsupini.R
+5aae740ee2ae71366d7a85c59710f0aa *R/hini_for_at.R
+2045bce155be2d1020897ece177106ad *R/solve_pH_from_AT.R
+4f5f39184f1740fa7f5cb8afb4405487 *README.md
+e571f54239ccc82b52bb223cd9492157 *man/solve_pH_from_AT.Rd
