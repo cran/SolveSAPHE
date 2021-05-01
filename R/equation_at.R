@@ -54,7 +54,7 @@ equation_at <- function (p_alktot, p_h,       p_dicvar, p_bortot,
 
     result =   ANW(p_h, p_dicvar, p_bortot, p_po4tot, p_siltot,
                     p_nh4tot, p_h2stot, p_so4tot, p_flutot,
-                    p_dicsel = p_dicsel, api, p_deriv)
+                    p_dicsel, api, p_deriv)
                             
     z_anw = result[1]
     zdiffalk = z_anw + zalk_wat - p_alktot

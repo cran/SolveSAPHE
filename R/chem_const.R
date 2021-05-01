@@ -89,6 +89,8 @@ compute_dissoc_constants <- function (p_temp, p_sal, p_pres, p_pHscale="T")
 # K_HSO4  :  Dissociation constant of hydrogen sulfate (mol/kg) on free scale
 # K_HF    :  Dissociation constant of hydrogen fluoride (mol/kg) on free scale
 # K_H2O   :  Dissociation constant of water (mol/kg) on chosen scale
+#
+# Note :  K2_Sil, second dissociation constant of sillicic acid is not computed.
 {
     t_k = p_temp + t_k_zerodegc
     
@@ -1408,7 +1410,7 @@ A_BTOT_SALIN <- function (s)
     # Function returns total borate concentration in mol/kg-SW
     # given the salinity of a sample
 
-    # References: UppstrÃ¶m (1974), cited by  Dickson et al. (2007, chapter 5, p 10)
+    # References: Uppström (1974), cited by  Dickson et al. (2007, chapter 5, p 10)
     #             Millero (1982) cited in Millero (1995)
     # pH scale  : N/A
 
