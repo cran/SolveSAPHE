@@ -1,4 +1,13 @@
 
+# solveSAPHE 2.1.1 _(2026-11-17)_
+
+## Bug fixed
+
+* Three analytic derivatives in anw.R were wrong.
+* In addition to these errors, three continuation lines beginning with “+” were parsed, within the same file, as a separate expression, which resulted in the truncation of the originally intended expressions.
+* Because of the bracketing safeguards, returned roots stayed accurate, and the combined effect of all errors was only extra iterations.
+* Fix provided by Otmane Bentaleb
+
 # solveSAPHE 2.1.0 _(2021-04-09)_
 
 ## New features
@@ -7,7 +16,7 @@
 
 ## Bug fixed
 
-* Softare crashed when using [CO3--] and TA pair with specific input values
+* Software crashed when using [CO3--] and TA pair with specific input values
 
 # SolveSAPHE 2.0.0 _(2021-02-12)_
 

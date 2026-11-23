@@ -127,26 +127,24 @@ ANW <- function (p_h, p_dicvar, p_bortot,
         if (p_dicsel == "DIC")
         {
             # DIC is the control variable of the carbonate system
-            zdnumer_dic = api$api1_dic*api$api2_dic 
-                + p_h*(4.*api$api2_dic + p_h*       api$api1_dic)
+            zdnumer_dic = api$api1_dic*api$api2_dic + p_h*(4.*api$api2_dic + p_h*       api$api1_dic)
             zdalk_dic   = -p_dicvar*(zdnumer_dic/zdenom_dic^2)
         }
         else if (p_dicsel == "CO2")
         {
             # [CO2] is the control variable of the carbonate system
-            zdnumer_dic = 4.*api$api2_dic   
-                + p_h*(2.*api$api1_dic - p_h)
+            zdnumer_dic = 4.*api$api2_dic + p_h*api$api1_dic
             zdalk_dic   = -p_dicvar*(zdnumer_dic/p_h^3)
         }
         else if (p_dicsel == "HCO3")
         {
             # [HCO3] is the control variable of the carbonate system
-            zdalk_dic   = -p_dicvar*(2.*api$api2_dic/p_h^2)
+            zdalk_dic   = -p_dicvar*(2.*api$api2_dic/(api$api1_dic*p_h^2))
         }
         else if (p_dicsel == "CO3")
         {
             # [CO3] is the control variable of the carbonate system
-            zdalk_dic   =  p_dicvar/api$api2_dic
+            zdalk_dic   =  p_dicvar*api$api1_dic/api$api2_dic
         }
 
         # B(OH)3 - B(OH)4 : n=1
@@ -162,8 +160,7 @@ ANW <- function (p_h, p_dicvar, p_bortot,
 
         # H4SiO4 - H3SiO4 - H2SiO4 : n=2, m=0
         # if api$api2_sil is zero, then H2SiO4 does not account, downgrading to :  H4SiO4 - H3SiO4 : n=1, m=0
-        zdnumer_sil = api$api1_sil*api$api2_sil 
-            + p_h*(4.*api$api2_sil + p_h*       api$api1_sil)
+        zdnumer_sil = api$api1_sil*api$api2_sil + p_h*(4.*api$api2_sil + p_h*       api$api1_sil)
         zdalk_sil   = -p_siltot*(zdnumer_sil/zdenom_sil^2)
 
         # NH4 - NH3 : n=1

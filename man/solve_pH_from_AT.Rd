@@ -79,7 +79,7 @@ Else, one initial value is expected}
 }
 
 \details{Formulations used when calculating dissociation constants:
-  \itemize{
+  \describe{
     \item{Carbonate if Total pH scale: }{Luecker et al. (2000) -- also Handbook (2007)}
     \item{Carbonate if SWS or Free pH scale: }{Millero et al. (1995) -- also Handbook (2007)}
     \item{Boric acid: }{Dickson (1990, eq. 2  3) -- also Handbook (2007, eq. 37)}
